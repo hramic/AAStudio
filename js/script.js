@@ -1,4 +1,3 @@
-// Optional: Initialize AOS if you use it
 if (typeof AOS !== "undefined") {
     AOS.init({
         duration: 1000,
@@ -36,3 +35,12 @@ if (goTopBtn) {
         });
     });
 }
+const hero = document.querySelector('.hero');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        hero.classList.add('shrink');
+    } else {
+        hero.classList.remove('shrink');
+    }
+});
