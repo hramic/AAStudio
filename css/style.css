@@ -236,3 +236,48 @@ footer {
     font-size: 28px;
     transform: translateY(-30px);
 }
+.services {
+    padding: 60px 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-item {
+    background-color: #f9f9f9;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.service-item p {
+    font-weight: 200;
+    font-size: 15px;
+    color: #333;
+}
