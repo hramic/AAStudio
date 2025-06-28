@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     background-color: #fff;
     color: #111;
 }
@@ -15,17 +15,67 @@ header {
     padding: 30px 50px;
     align-items: center;
     background: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 100;
     border-bottom: 1px solid #eee;
 }
 
-nav a {
+.logo {
+    margin-left: -60px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
     text-decoration: none;
-    color: #111;
-    margin-left: 30px;
+    color: #000;
     font-weight: 200;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #000;
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 1;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 30px;
+        background: #fff;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 30px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
 
 .gallery {
@@ -73,16 +123,6 @@ nav a {
     color: #000;
 }
 
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 14px;
-    background-color: #fff;
-    color: #888;
-}
-.logo {
-    margin-left: -60px; /* try -10px to -30px depending on how far */
-}
 .contact {
     padding: 60px 40px;
     background-color: #fff;
@@ -106,8 +146,9 @@ footer {
 .map-container {
     max-width: 900px;
     margin: 0 auto;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
+
 .contact-info {
     margin-bottom: 20px;
     font-weight: 200;
@@ -123,4 +164,32 @@ footer {
 
 .contact-info a:hover {
     text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #888;
+}
+
+#goTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 999;
+    font-size: 24px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#goTopBtn.show {
+    opacity: 1;
 }
