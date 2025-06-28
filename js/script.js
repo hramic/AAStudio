@@ -20,7 +20,7 @@ if (toggle && navLinks) {
 }
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 200) {
         goTopBtn.classList.add("show");
     } else {
         goTopBtn.classList.remove("show");
