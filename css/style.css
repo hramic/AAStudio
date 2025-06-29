@@ -3,7 +3,7 @@ html {
 }
 
 section {
-    scroll-margin-top: 370px;
+    scroll-margin-top: 600px;
 }
 
 
@@ -48,7 +48,7 @@ nav {
 
 .nav-links li a {
     text-decoration: none;
-    color: #000;
+    color: #ffffff;
     font-weight: 200;
 }
 
@@ -207,7 +207,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70vh;
+    height: 100vh;
+    width: 100%;
     text-align: center;
     background-image: url("/assets/images/modern_house.jpg");
     background-size: cover;
@@ -227,14 +228,16 @@ footer {
 }
 
 .hero h1 {
-    font-size: 64px;
-    font-weight: 200;
-    letter-spacing: 6px;
+    font-family: Inter Tight, sans-serif;
+    font-size: 128px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
     margin: 0;
     transition: font-size 0.5s ease, transform 0.5s ease;
     position: relative;
     z-index: 2;
     color: white;
+    padding-bottom: 0;
 }
 
 .hero.shrink {
@@ -363,4 +366,10 @@ footer {
 
 .cursor.expand .cursor-arrow {
     opacity: 1;
+}
+.registered {
+    font-size: 0.4em;
+    vertical-align: super;
+    margin-left: 2px;
+    color: white;
 }
