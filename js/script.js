@@ -44,3 +44,36 @@ window.addEventListener('scroll', () => {
         hero.classList.remove('shrink');
     }
 });
+const cursor = document.querySelector(".cursor");
+const arrow = document.querySelector(".cursor-arrow");
+let mouseX = 0;
+let mouseY = 0;
+let posX = 0;
+let posY = 0;
+
+document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX - cursor.offsetWidth / 2;
+    mouseY = e.clientY - cursor.offsetHeight / 2;
+});
+
+function animate() {
+    posX += (mouseX - posX) * 0.15;
+    posY += (mouseY - posY) * 0.15;
+    cursor.style.left = `${posX}px`;
+    cursor.style.top = `${posY}px`;
+    requestAnimationFrame(animate);
+}
+animate();
+
+// Klikabilni hover efekat (a, button, .clickable)
+const clickableElements = document.querySelectorAll("a, button, .clickable");
+
+clickableElements.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+        cursor.classList.add("expand");
+    });
+    el.addEventListener("mouseleave", () => {
+        cursor.classList.remove("expand");
+    });
+});
+

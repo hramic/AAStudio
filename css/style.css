@@ -15,13 +15,18 @@ body {
 }
 
 header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
     display: flex;
     justify-content: space-between;
     padding: 30px 50px;
     align-items: center;
-    background: #fff;
-    border-bottom: 1px solid #eee;
+    background: transparent;
 }
+
 
 .logo {
     margin-left: -60px;
@@ -325,4 +330,37 @@ footer {
 .logo:hover {
     transform: scale(1.05);
     filter: grayscale(0%);
+}
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: black;
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, top 0.1s, left 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.cursor-arrow {
+    opacity: 0;
+    transition: opacity 0.1s ease;
+}
+
+.cursor.expand {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+}
+
+.cursor.expand .cursor-arrow {
+    opacity: 1;
 }
