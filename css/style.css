@@ -308,7 +308,7 @@ footer {
     line-height: 1.6;
 }
 .section-header {
-    padding: 60px 40px 20px; /* gornji i donji razmak */
+    padding: 60px 40px 20px;
     text-align: center;
 }
 
@@ -318,4 +318,11 @@ footer {
     color: #000;
     margin: 0;
 }
+.logo {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
 
+.logo:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
