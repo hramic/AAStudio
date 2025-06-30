@@ -76,4 +76,3 @@ clickableElements.forEach((el) => {
         cursor.classList.remove("expand");
     });
 });
-
