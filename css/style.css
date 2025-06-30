@@ -79,36 +79,36 @@ nav {
 
 .menu-toggle {
     display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 45px;
+    height: 45px;
     background: none;
     border: none;
-    padding: 0;
-    line-height: 1;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+    color: white;
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 80px;
-        right: 30px;
-        background: #fff;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px 30px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        z-index: 999;
-    }
-
-    .nav-links.active {
+    .menu-toggle {
         display: flex;
     }
 
-    .menu-toggle {
-        display: block;
+    .nav-links {
+        transition: transform 0.3s ease;
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
     }
 }
 

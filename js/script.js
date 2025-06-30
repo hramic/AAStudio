@@ -5,9 +5,9 @@ if (typeof AOS !== "undefined") {
     });
 }
 
+/*
 const toggle = document.getElementById("menu-toggle");
 const navLinks = document.querySelector(".nav-links");
-const goTopBtn = document.getElementById("goTopBtn");
 
 if (toggle && navLinks) {
     toggle.addEventListener("click", () => {
@@ -18,7 +18,18 @@ if (toggle && navLinks) {
         toggle.setAttribute("aria-expanded", expanded);
     });
 }
+ */
 
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    menuToggle.classList.toggle("open");
+});
+
+
+const goTopBtn = document.getElementById("goTopBtn");
 window.addEventListener("scroll", () => {
     if (window.scrollY > 200) {
         goTopBtn.classList.add("show");
