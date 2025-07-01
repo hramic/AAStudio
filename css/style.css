@@ -96,8 +96,11 @@ nav {
 @media (hover: none) and (pointer: coarse) {
     .cursor {
         display: none !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 }
+
 
 
 @media (max-width: 768px) {
