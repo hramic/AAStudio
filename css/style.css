@@ -14,7 +14,7 @@ a, button, input, textarea, select, label {
     box-sizing: border-box;
 }
 section {
-    /*scroll-margin-top: 600px;*/
+    scroll-margin-top: 80vh;
 }
 
 body {
@@ -122,6 +122,7 @@ nav {
 .item {
     position: relative;
     overflow: hidden;
+    aspect-ratio: 4/3;
 }
 
 .item img {
@@ -129,6 +130,7 @@ nav {
     display: block;
     filter: grayscale(100%);
     transition: transform 0.4s ease, filter 0.4s ease;
+    object-fit: cover;
 }
 
 .item:hover img {
@@ -164,7 +166,7 @@ nav {
 }
 
 .contact h2 {
-    font-size: 2em;
+    font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 10px;
     color: #000;
@@ -275,50 +277,92 @@ footer {
     transform: translateY(-30px);
 }
 .services {
-    padding: 60px 40px;
-    background-color: #fff;
+    padding: 60px 20px;
+    background-color: #f5f5f5;
     text-align: center;
 }
 
 .services h2 {
-    font-size: 2em;
-    font-weight: 400;
-    margin-bottom: 40px;
-    color: #000;
-}
-
-.service-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.service-item {
-    background-color: #f9f9f9;
-    padding: 30px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-5px);
-}
-
-.service-item h3 {
-    font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 50px;
     color: #111;
 }
 
-.service-item p {
-    font-weight: 200;
-    font-size: 15px;
-    color: #333;
+.steps-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.step-number {
+    flex-shrink: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #222;
+    background-color: #e0e0e0;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    user-select: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.step-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.step-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Početno skriveno stanje */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+/* Kada element dobije klasu visible animira se */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .step {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 2rem;
+    }
+}
+
 .about {
     padding: 60px 40px;
     background-color: #f5f5f5;
@@ -346,7 +390,7 @@ footer {
 }
 
 .section-header h2 {
-    font-size: 2em;
+    font-size: 2.5rem;
     font-weight: 400;
     color: #000;
     margin: 0;
@@ -392,4 +436,63 @@ footer {
     vertical-align: super;
     margin-left: 2px;
     color: white;
+}
+.about {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.about-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1100px;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.about-image .image-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-text p {
+    margin: 0;
 }

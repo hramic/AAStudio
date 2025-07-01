@@ -87,3 +87,21 @@ clickableElements.forEach((el) => {
         cursor.classList.remove("expand");
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const steps = document.querySelectorAll('.step');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                entry.target.classList.remove('hidden');
+                observer.unobserve(entry.target); // animacija se aktivira samo jednom
+            }
+        });
+    }, { threshold: 0.2 });
+
+    steps.forEach(step => {
+        observer.observe(step);
+    });
+});
