@@ -22,10 +22,22 @@ if (toggle && navLinks) {
 
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.querySelector(".nav-links");
+const pageContent = document.querySelector('.page-content');
+const navItems = document.querySelectorAll(".nav-links a");
 
 menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
     menuToggle.classList.toggle("open");
+    pageContent.classList.toggle('blur');
+    navItems.forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            menuToggle.classList.remove("open");
+            pageContent.classList.remove("blur");
+            // Ako želiš da hamburger meni aria-expanded bude ispravan:
+            menuToggle.setAttribute("aria-expanded", "false");
+        });
+    });
 });
 
 

@@ -120,6 +120,17 @@ nav {
         opacity: 1;
         pointer-events: auto;
     }
+
+    .page-content {
+        transition: filter 0.3s ease;
+    }
+
+    .page-content.blur {
+        filter: blur(5px);
+        pointer-events: none; /* spriječava klikove dok je blur */
+        user-select: none;
+    }
+
 }
 
 .gallery {
