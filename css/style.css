@@ -93,9 +93,12 @@ nav {
     color: white;
 }
 
-@media {
-    cursor: none;
+@media (hover: none) and (pointer: coarse) {
+    body {
+        cursor: none;
+    }
 }
+
 
 @media (max-width: 768px) {
     .menu-toggle {
