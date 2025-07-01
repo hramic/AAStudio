@@ -5,21 +5,6 @@ if (typeof AOS !== "undefined") {
     });
 }
 
-/*
-const toggle = document.getElementById("menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-if (toggle && navLinks) {
-    toggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        // Accessibility toggle aria-expanded attribute
-        const expanded =
-            toggle.getAttribute("aria-expanded") === "true" ? "false" : "true";
-        toggle.setAttribute("aria-expanded", expanded);
-    });
-}
- */
-
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const pageContent = document.querySelector('.page-content');
