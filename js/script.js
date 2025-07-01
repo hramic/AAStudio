@@ -80,8 +80,8 @@ document.addEventListener("mousemove", (e) => {
 });
 
 function animate() {
-    posX += (mouseX - posX) * 0.15;
-    posY += (mouseY - posY) * 0.15;
+    posX += (mouseX - posX) * 0.6;
+    posY += (mouseY - posY) * 0.6;
     cursor.style.left = `${posX}px`;
     cursor.style.top = `${posY}px`;
     requestAnimationFrame(animate);
