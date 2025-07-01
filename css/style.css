@@ -94,8 +94,8 @@ nav {
 }
 
 @media (hover: none) and (pointer: coarse) {
-    body {
-        cursor: none;
+    .cursor {
+        display: none !important;
     }
 }
 
