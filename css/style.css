@@ -177,6 +177,12 @@ nav {
     padding: 60px;
 }
 
+@media (max-width: 420px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
 .item {
     position: relative;
     overflow: hidden;
