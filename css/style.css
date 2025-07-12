@@ -319,8 +319,9 @@ footer {
 }
 
 .hero h1 {
-    font-family: Inter Tight, sans-serif;
-    font-size: clamp(32px, 10vw, 128px);
+    font-family: "Times New Roman", sans-serif;
+
+    font-size: clamp(32px, 10vw, 74px);
     font-weight: 500;
     letter-spacing: -0.02em;
     margin: 0;
@@ -330,7 +331,6 @@ footer {
     color: white;
     padding-bottom: 0;
 }
-
 .hero.shrink {
     height: 100px;
     align-items: flex-start;
