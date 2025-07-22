@@ -14,12 +14,19 @@ menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
     menuToggle.classList.toggle("open");
     pageContent.classList.toggle('blur');
+
+    document.body.classList.toggle("noscroll");
+    document.documentElement.classList.toggle("noscroll");
+
     navItems.forEach(link => {
         link.addEventListener("click", () => {
             navLinks.classList.remove("active");
             menuToggle.classList.remove("open");
             pageContent.classList.remove("blur");
-            // Ako želiš da hamburger meni aria-expanded bude ispravan:
+
+            document.body.classList.remove("noscroll");     // 👈 I OVDJE
+            document.documentElement.classList.remove("noscroll");
+
             menuToggle.setAttribute("aria-expanded", "false");
         });
     });

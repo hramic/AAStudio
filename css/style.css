@@ -560,3 +560,8 @@ footer {
 .about-text p {
     margin: 0;
 }
+
+body.noscroll, html.noscroll {
+    overflow: hidden !important;
+    height: 100%;
+}
