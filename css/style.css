@@ -572,3 +572,7 @@ body.noscroll, html.noscroll {
     margin: 20px auto;
     border-radius: 8px;
 }
+
+.agencija {
+    font-family: "Times New Roman", sans-serif;
+}
