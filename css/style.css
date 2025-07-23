@@ -569,6 +569,6 @@ body.noscroll, html.noscroll {
     display: block;
     max-width: 100%;
     width: 230px;
-    margin: 20px auto; /* centriraj sliku i dodaj prostor */
-    border-radius: 8px; /* zaobljeni uglovi - opcionalno */
+    margin: 20px auto;
+    border-radius: 8px;
 }
